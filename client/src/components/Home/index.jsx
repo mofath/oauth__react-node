@@ -1,12 +1,14 @@
-const Home = (props) => {
-  console.log(222222);
-  console.log(props);
-  console.log(222222);
+import { Link } from 'react-router-dom';
 
+const Home = ({ auth: { login, isAuthenticated } }) => {
   return (
     <div>
       <h1>Home</h1>
-      <button onClick={() => props.auth.login()}>Log In</button>
+      {isAuthenticated() ? (
+        <Link to='/profile'>View Profile</Link>
+      ) : (
+        <button onClick={() => login()}>Log In</button>
+      )}
     </div>
   );
 };
