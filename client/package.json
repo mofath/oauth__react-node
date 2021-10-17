@@ -50,5 +50,6 @@
     "prettier": "^2.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-bestit-base": "^1.1.0"
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
